@@ -1,0 +1,77 @@
+<p-panel header="UnCommon Pipes" class="p-1">
+  <p>UnCommonly used Pipes in Angular!</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p>
+        Greetings! {{name}}, You are the {{gender | i18nSelect:invitationMap}}
+        of our Main Event!
+      </p>
+      <p-button
+        (click)='changeClient()'
+        label="Change Client">
+      </p-button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>Currently we have {{clients.length | i18nPlural:clientsMap}}</p>
+      <p-button label="Update Clients Waiting" (click)="deleteClient()"></p-button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{clients}}</pre>
+
+      <b>slice:0:2</b>
+      <pre>{{clients | slice:0:2}}</pre>
+
+      <b>slice:1:2</b>
+      <pre>{{clients | slice:1:2}}</pre>
+
+      <b>slice:1:3</b>
+      <pre>{{clients | slice:1:3}}</pre>
+
+      <b>slice:3:4</b>
+      <pre>{{clients | slice:3:4}}</pre>
+
+      <b>slice:0:-1</b>
+      <pre>{{clients | slice:0:-1}}</pre>
+
+      <b>slice:0:-2</b>
+      <pre>{{clients | slice:0:-2}}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre> {{person | json}}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b> {{item.key| titlecase}} :</b> {{item.value}}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre *ngIf="!(myObservableTimer | async)">Solving Observable . . .</pre>
+      <pre>{{myObservableTimer | async}}</pre>
+
+      <pre *ngIf="!(promiseValue | async)">Solving Observable . . .</pre>
+      <pre>{{promiseValue | async}}</pre>
+    </p-fieldset>
+  </div>
+</div>

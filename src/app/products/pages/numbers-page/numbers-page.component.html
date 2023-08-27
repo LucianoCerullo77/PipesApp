@@ -1,0 +1,24 @@
+<p-panel header="Numeric Pipes" class="p-1">
+  <p>Commonly used Pipes in Angular!</p>
+</p-panel>
+
+<div class="grid">
+
+  <div class="col-12 md:col-4">
+    <p-card header="Net Sells" subheader="Current year">{{totalSells | number:"1.2-2"
+      }}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Brut Sells" subheader="Current year">{{totalSells + 1250 |
+      currency:'USD':'symbol-narrow':'1.4-4'
+      }}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Porcentage Earnings" subheader="Current year">{{ percentage
+      | percent:'1.2-2'
+      }}</p-card>
+  </div>
+
+</div>

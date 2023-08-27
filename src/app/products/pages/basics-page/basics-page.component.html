@@ -1,0 +1,66 @@
+<p-panel header="Basic Pipes" class="p-1">
+  <p>Commonly used Pipes in Angular!</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="UpperCase Pipe">{{nameUpper | uppercase}}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="LowerCase Pipe">{{nameLower | lowercase}}</p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="TitleCase Pipe">{{fullname | titlecase}}</p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Date Pipe">
+      <ol>
+        <li>Date : </li>
+        <li> Date: | date</li>
+        <li> Date: | date: "short"</li>
+        <li> Date: | date: "long"</li>
+        <li> Date: | date: "MMMM"</li>
+        <li> Date: | date: "MMMM dd, yyyy"</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>Date | date : "long" : "GMT-6" </li>
+        <li>Date | date : "long" :"GMT-3"</li>
+        <li>Date | date : "long" :"" :"es-ARG" </li>
+        <li>Date | date : "long" :"" :"en-US" </li>
+        <li>Date | date : "long" :"" :"fr-CA" </li>
+      </ol>
+
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Date Pipes Applied">
+      <ol>
+        <li>{{customDate}} : </li>
+        <li> {{customDate | date}}</li>
+        <li> {{customDate | date: "short"}}</li>
+        <li> {{customDate | date: "long"}}</li>
+        <li> {{customDate | date: "MMMM"}}</li>
+        <li> {{customDate | date: "MMMM dd, yyyy"}}</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>{{customDate | date : "long" :"GMT-6"}}</li>
+        <li>{{customDate | date : "long" :"GMT-3"}}</li>
+        <li>{{customDate | date : "long" :"" :"es-AR"}} </li>
+        <li>{{customDate | date : "long" :"" :"en-US"}} </li>
+        <li>{{customDate | date : "long" :"" :"fr-CA"}} </li>
+      </ol>
+
+    </p-card>
+  </div>
+
+</div>
